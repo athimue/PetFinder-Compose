@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "PetFinder-Compose"
 include(":app")
- 
+include(":finder:ui")
+include(":finder:data")
+include(":finder:domain")
