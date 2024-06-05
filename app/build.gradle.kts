@@ -1,6 +1,7 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.jetbrains.kotlin.android)
+  alias(libs.plugins.kotlinxSerialization)
 }
 
 android {
@@ -37,7 +38,7 @@ android {
     compose = true
   }
   composeOptions {
-    kotlinCompilerExtensionVersion = "1.5.1"
+    kotlinCompilerExtensionVersion = "1.5.4"
   }
   packaging {
     resources {
@@ -47,6 +48,13 @@ android {
 }
 
 dependencies {
+  implementation(project(":finder:ui"))
+  implementation(project(":finder:data"))
+  implementation(project(":finder:domain"))
+
+  implementation(libs.hilt)
+  implementation(libs.kotlinxSerialization)
+  implementation(libs.navigation)
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.lifecycle.runtime.ktx)
   implementation(libs.androidx.activity.compose)
