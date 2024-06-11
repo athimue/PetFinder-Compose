@@ -5,7 +5,7 @@ import com.mathieu.finder.domain.model.Link
 data class LinkDto(
   val href: String
 ) {
-  fun toLinkDto() = Link(
+  fun toLink() = Link(
     href = href
   )
 }
