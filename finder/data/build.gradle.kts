@@ -1,6 +1,8 @@
 plugins {
   alias(libs.plugins.android.library)
   alias(libs.plugins.jetbrains.kotlin.android)
+  id("dagger.hilt.android.plugin")
+  id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,9 +39,12 @@ dependencies {
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)
+
   implementation(libs.retrofit)
   implementation(libs.retrofit.converter.gson)
   implementation(libs.okhttp)
   implementation(libs.okhttp.logging.interceptor)
+
   implementation(libs.hilt)
+  ksp(libs.hilt.android.compiler)
 }

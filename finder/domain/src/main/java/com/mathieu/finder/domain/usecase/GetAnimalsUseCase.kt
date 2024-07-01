@@ -1,6 +1,6 @@
 package com.mathieu.finder.domain.usecase
 
-import com.athimue.domain.repository.AnimalRepository
+import com.mathieu.finder.domain.repository.AnimalRepository
 import javax.inject.Inject
 
 class GetAnimalsUseCase

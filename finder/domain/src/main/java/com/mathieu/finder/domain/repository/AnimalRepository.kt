@@ -1,4 +1,4 @@
-package com.athimue.domain.repository
+package com.mathieu.finder.domain.repository
 
 import com.mathieu.finder.domain.model.Animal
 

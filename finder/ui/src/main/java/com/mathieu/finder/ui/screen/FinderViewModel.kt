@@ -1,5 +1,6 @@
 package com.mathieu.finder.ui.screen
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -22,6 +23,8 @@ class FinderViewModel
 
         init {
             viewModelScope.launch {
+                val result = getAnimalsUseCase()
+                Log.d("COUCOU", result.toString())
                 animals = getAnimalsUseCase()
             }
         }

@@ -3,6 +3,7 @@ plugins {
   alias(libs.plugins.jetbrains.kotlin.android)
   alias(libs.plugins.kotlinxSerialization)
   id("kotlin-kapt")
+  id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -65,6 +66,8 @@ dependencies {
   implementation(libs.androidx.ui.tooling.preview)
   implementation(libs.androidx.material3)
   implementation(libs.hilt)
+  //implementation("com.google.dagger:hilt-android:2.50")
+  kapt(libs.hilt.android.compiler)
 
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)

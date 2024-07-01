@@ -9,6 +9,6 @@ interface PetFinderApi {
   suspend fun getAnimals(): Response<AnimalResponseDto>
 
   companion object {
-    const val PETFINDER_API = "api.petfinder.com"
+    const val PETFINDER_API = "https://api.petfinder.com"
   }
 }
